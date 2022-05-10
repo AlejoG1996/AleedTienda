@@ -1,6 +1,7 @@
 ﻿using AleedShooping.Data;
 using AleedShooping.Data.Entities;
 using AleedShooping.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vereyon.Web;
@@ -8,6 +9,7 @@ using static AleedShooping.Helpers.ModalHelper;
 
 namespace AleedShooping.Controllers
 {
+    [Authorize(Roles="Admin")]
     public class CategoriesController : Controller
     {
         private readonly DataContext _context;

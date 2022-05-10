@@ -17,7 +17,8 @@ using static AleedShooping.Helpers.ModalHelper;
 
 namespace Shopping.Controllers
 {
-  
+
+    [Authorize(Roles = "Admin")]
     public class CountriesController : Controller
     {
         private readonly DataContext _context;
